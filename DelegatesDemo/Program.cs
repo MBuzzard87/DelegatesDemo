@@ -17,12 +17,7 @@ namespace DelegatesDemo
             */
 
             /* Person Class
-             
-
-
-            */
-
-            Person p1 = new Person() { Name = "Mike", Age = 34 };
+              Person p1 = new Person() { Name = "Mike", Age = 34 };
             Person p2 = new Person() { Name = "Munir", Age = 16 };
             Person p3 = new Person() { Name = "Matt", Age = 70 };
             Person p4 = new Person() { Name = "Jenn", Age = 28 };
@@ -36,9 +31,9 @@ namespace DelegatesDemo
             DisplayPeople("Senior", people, IsSenior);
 
 
-            /* Create a new variable called filter of type FilterDelegate.
-             * Then we assigned an anonymours method to it instead of an already defined method
-             */
+             // Create a new variable called filter of type FilterDelegate.
+             // Then we assigned an anonymours method to it instead of an already defined method
+             
 
             FilterDelegate filter = delegate (Person p)
             {
@@ -51,28 +46,51 @@ namespace DelegatesDemo
 
             Console.WriteLine("\n");
             DisplayPeople("All: ", people, delegate (Person p) { return true; });
-            
+
             Console.WriteLine("\n");
             Console.WriteLine("\nStatement Lambda");
             string searchKeyword = "a";
             DisplayPeople("Age > 20 with search Keyword: " + searchKeyword, people, p =>
-               {
-                   if(p.Name.Contains(searchKeyword) && p.Age>20)
-                   {
-                       return true;
-                   }
-                   else
-                   {
-                       return false;
-                   }
-               });
+            {
+                if (p.Name.Contains(searchKeyword) && p.Age > 20)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            });
 
             Console.WriteLine("\n");
             Console.WriteLine("\nExpression Lambda");
 
             DisplayPeople("exactly 34: ", people, p => p.Age == 34);
 
+
+            */
+
+            AudioSystem audioSystem = new AudioSystem();
+            RenderingEngine renderingEngine = new RenderingEngine();
+            Player player1 = new Player("Buzz");
+            Player player2 = new Player("BuzzyWuzz");
+
+
+            GameEventManager.TriggerGameStart();
+            
+           
+
+            Console.WriteLine("Game is running.... Press any key to end the game.");
+
+           
+
+
+            Console.Read();
+
+            GameEventManager.TriggerGameOver();
+
             Console.ReadKey();
+
         }
 
         /*A method to display the list of people that passes the filter condition
@@ -80,7 +98,7 @@ namespace DelegatesDemo
          * this method will take a title to be displayed, the list of people,
          * and a filter delegate
          */
-
+        /*
         static void DisplayPeople(string title, List<Person> people, FilterDelegate filter)
         {
             Console.WriteLine(title);
@@ -108,5 +126,7 @@ namespace DelegatesDemo
         {
             return p.Age >= 65;
         }
+        */
     }
+
 }
