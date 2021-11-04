@@ -1,0 +1,7 @@
+C:\Users\Buzz\Desktop\VS2019\DelegatesDemo\DelegatesDemo\bin\Debug\DelegatesDemo.exe.config
+C:\Users\Buzz\Desktop\VS2019\DelegatesDemo\DelegatesDemo\bin\Debug\DelegatesDemo.exe
+C:\Users\Buzz\Desktop\VS2019\DelegatesDemo\DelegatesDemo\bin\Debug\DelegatesDemo.pdb
+C:\Users\Buzz\Desktop\VS2019\DelegatesDemo\DelegatesDemo\obj\Debug\DelegatesDemo.csproj.AssemblyReference.cache
+C:\Users\Buzz\Desktop\VS2019\DelegatesDemo\DelegatesDemo\obj\Debug\DelegatesDemo.csproj.CoreCompileInputs.cache
+C:\Users\Buzz\Desktop\VS2019\DelegatesDemo\DelegatesDemo\obj\Debug\DelegatesDemo.exe
+C:\Users\Buzz\Desktop\VS2019\DelegatesDemo\DelegatesDemo\obj\Debug\DelegatesDemo.pdb
