@@ -16,14 +16,16 @@ namespace DelegatesDemo
         public Player(string name)
         {
             PlayerName = name;
+            GameEventManager.OnGameStart += StartGame;
+            GameEventManager.OnGameOver += GameOver;
         }
 
-        public void StartGame()
+        private void StartGame()
         {
             Console.WriteLine($"Spawning player with ID: {PlayerName}");
         }
 
-        public void GameOver()
+        private void GameOver()
         {
             Console.WriteLine($"Removing player with ID: {PlayerName}");
         }

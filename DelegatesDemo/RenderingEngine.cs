@@ -8,14 +8,18 @@ namespace DelegatesDemo
 {
     class RenderingEngine
     {
-
-        public void StartGame()
+        public RenderingEngine()
+        {
+            GameEventManager.OnGameStart += StartGame;
+            GameEventManager.OnGameOver += GameOver;
+        }
+        private void StartGame()
         {
             Console.WriteLine("Rendering engine started");
             Console.WriteLine("Drawing Visuals....");
         }
 
-        public void GameOver()
+        private void GameOver()
         {
             Console.WriteLine("Rendering engine stopped");
         }

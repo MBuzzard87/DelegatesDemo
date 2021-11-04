@@ -9,13 +9,19 @@ namespace DelegatesDemo
     class AudioSystem
     {
 
-        public void StartGame()
+        public AudioSystem()
+        {
+            GameEventManager.OnGameStart += StartGame;
+            GameEventManager.OnGameOver += GameOver;
+        }
+
+        private void StartGame()
         {
             Console.WriteLine("Audio system started...");
             Console.WriteLine("Playing audio...");
         }
 
-        public void GameOver()
+        private void GameOver()
         {
             Console.WriteLine("Audio system stopped");
         }
